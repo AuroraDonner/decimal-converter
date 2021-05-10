@@ -2,7 +2,7 @@ input.onButtonPressed(Button.A, function () {
     led.toggle(light2 % 5, light2 / 5)
 })
 function blink () {
-    for (let index2 = 0; index2 < 2; index2++) {
+    for (let index = 0; index < 2; index++) {
         led.plotBrightness(light2 % 5, light2 / 5, 128)
         basic.pause(100)
         led.unplot(light2 % 5, light2 / 5)
@@ -30,10 +30,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 function reset () {
     light2 = 24
     value = 16777216
-    index = 0
+    decimal = 0
     blink()
 }
-let index = 0
 let value = 0
 let decimal = 0
 let light2 = 0
