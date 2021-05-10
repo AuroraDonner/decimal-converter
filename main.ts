@@ -28,9 +28,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     reset()
 })
 function reset () {
-    light2 = 24
     value = 16777216
     decimal = 0
+    light2 = 24
     blink()
 }
 let value = 0
