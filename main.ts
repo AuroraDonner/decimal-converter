@@ -17,8 +17,8 @@ input.onButtonPressed(Button.B, function () {
     blink()
 })
 function calculate () {
-    for (let index2 = 0; index2 <= 24; index2++) {
-        if (led.point(index2 % 5, index2 / 5)) {
+    for (let index = 0; index <= 24; index++) {
+        if (led.point(index % 5, index / 5)) {
             decimal += value
         }
         value = value / 2
