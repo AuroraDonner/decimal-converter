@@ -10,8 +10,15 @@ function blink () {
     }
 }
 input.onButtonPressed(Button.AB, function () {
-    for (let index = 0; index <= 24; index++) {
-        if (led.point(index % 5, index / 5)) {
+    calculate()
+})
+input.onButtonPressed(Button.B, function () {
+    light2 += -1
+    blink()
+})
+function calculate () {
+    for (let index2 = 0; index2 <= 24; index2++) {
+        if (led.point(index2 % 5, index2 / 5)) {
             decimal += value
         }
         value = value / 2
@@ -19,11 +26,9 @@ input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
     basic.pause(200)
     basic.showNumber(decimal)
-})
-input.onButtonPressed(Button.B, function () {
-    light2 += -1
-    blink()
-})
+    basic.pause(200)
+    basic.clearScreen()
+}
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     reset()
 })
